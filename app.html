@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <link rel="manifest" href="/index.js">
+  <title>Soul Worker app</title>
+
+  <!--  Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!--  StyleSheet  -->
+  <link rel="stylesheet" href="/style3.css">
+
+  <!--  Font Awesome  -->
+  <script src="https://kit.fontawesome.com/a9bed65047.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!--  Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+
+  <!--  Favicon  -->
+  <link rel="shortcut icon" href="images/green-favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/home.ico" type="image/x-icon">
+
+  <!--  Bootstrap JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</head>
+
+<body class="light_dark" onload="fetchBookmarks()">
+  <div class="row" id="bookmarks_parent" style="display: none;">
+    <div id="bookmarks" class="light_dark">
+      <form id="myForm" class="col-12">
+        <div class="col-4 form-group">
+          <label for="">Name</label>
+          <input type="text" class="form-control" id="siteName" placeholder="Enter Name for Bookmark">
+        </div>
+        <div class="col-4 form-group">
+          <label for="">URL</label>
+          <input type="text" class="form-control" id="siteURL" placeholder="Enter URL to Bookmark">
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg light_dark ">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand" id="helpage">Soul Worker</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#fff; font-size:30px; margin:auto 0;"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-nav mr-auto">
+
+ 
+
+          </div>
+
+
+
+         
+            </a>
+
+            <div class="dropdown-menu settings light_dark" aria-labelledby="navbarDropdownMenuLink">
+              <div class="grid">
+                <div class="grid-item">Name</div>
+                <a id="name_change" class="grid-item"><i class="fas fa-pen"></i></a>
+                <div class="grid-item">CC</div>
+                <input class="grid-item" type="checkbox" name="CC" id="closedCaptions">
+                <div class="grid-item">Open in New tab?</div>
+                <input class="grid-item" type="checkbox" name="" id="newTab">
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+ 
+          </div>
+
+        </div>
+      </div>
+  </nav>
+
+  <!-- heading -->
+  <!-- <WELCOME MESSAGE> -->
+  <!-- Add your Name Below after "어서오세요, __" . -->
+  <div class="row">
+    <div id="salutation" class="col-12 light_dark">
+      Soul Worker <span id="user_name">User</span>
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <form class="d-flex search" action="https://www.google.com/search">
+        <input class="form-control me-2 searchBar light_dark_neo" type="search" autofocus="autofocus"
+          placeholder="구글검색" aria-label="Search" name=q id=q>
+        <button class="btn btn-outline btn-dark searchButton light_dark_neo" type="submit">🔍</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Icons -->
+
+  <div class="container">
+    <div class="row bootstrapRow">
+
+     
+
+      <!-- 메뉴 -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/haru-removebg-preview.png" alt="VIT" height="100px">
+          </a>
+          <span class="hover_txt">하루 에스티아</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Google Classroom -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/릴리-removebg-preview.png" alt="GoogleClassroom" height="100px">
+          </a>
+          <span class="hover_txt">릴리 블룸메르헨</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- LinkedIn -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo ">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/스텔라-removebg-preview.png" alt="linkedin" height="100px">
+          </a>
+          <span class="hover_txt">스텔라 유니벨</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- GitHub -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo ">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/에프넬-removebg-preview.png" alt="github" height="100px">
+          </a>
+          <span class="hover_txt">에프넬</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- drive -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/이나비-removebg-preview.png" alt="drive" height="100px">
+          </a>
+          <span class="hover_txt">이나비</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- google calendar -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/치이-removebg-preview.png" alt="calendar" height="100">
+          </a>
+          <span class="hover_txt">치이</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Replit -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/다나-removebg-preview.png" alt="Replit" height="100px">
+          </a>
+          <span class="hover_txt">다나</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- codechef -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/어윈.png" alt="codechef" height="100px">
+          </a>
+          <span class="hover_txt">어윈</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- Codeforces -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/진.png" alt="codeforces" height="100">
+          </a>
+          <span class="hover_txt">진</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- hackerrank -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/캐시.png" alt="hackerrank" height="100">
+          </a>
+          <span class="hover_txt">캐시샵</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- kaggle -->
+
+      <div class="col-sm-4 col-4 col-lg-2 col-md-3">
+        <div class="icons light_dark_neo">
+          <a href="링크" target="_blank">
+            <img src="/소울워커/스팀.png" alt="kaggle" height="100">
+          </a>
+          <span class="hover_txt">STEAM</span>
+        </div>
+      </div>
+
+      <!-- <ADD ICON HERE> -->
+
+      <!-- LeetCode -->
+<!--  
+    <div class="col-sm-4 col-4 col-lg-2 col-md-3"> 
+        <div class="icons light_dark_neo">
+          <a href="https://leetcode.com/" target="_blank">
+            <img src="/게임시작 (1).png" alt="LeetCode" height="100">
+          </a>
+          <span class="hover_txt">LeetCode</span>
+        </div>
+      </div>-->
+
+
+
+
+      <!-- end of icons bar -->
+    </div>
+  </div>
+  <div class="footer">
+    © 2022 | Soul Felx Company
+  </div>
+  <!-- <script>
+    // for dark mode toggle
+    
+  </script> -->
+  <script src="index.js"></script>
+
+  <!--  Bootstrap  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
